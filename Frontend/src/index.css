@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .scroll-container {
+    /* display: flex;
+    width: max-content; Ensures container adapts to content width */
+    animation: scroll 50s linear infinite; /* Infinite scrolling animation */
+  }
