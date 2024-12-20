@@ -13,7 +13,7 @@ mongoose.connect(config.connectionString, {
     useUnifiedTopology: true
 })
 .then(()=> console.log("Connected to mongoDB"))
-.catch((err)=> console.log("Could not connect tto mongoDB", err))
+.catch((err)=> console.log("Could not connect to mongoDB", err))
 
 app.get('/', (req, res) => {
     res.send("Hello World!")
