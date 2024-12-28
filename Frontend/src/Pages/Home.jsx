@@ -1,11 +1,11 @@
-import React from "react";
+
 import Navbar from "../Components/Navbar/Navbar";
 import CourseCard from "../Components/Input/CourseCard";
 
 function Home() {
   return (
     <>
-      <div className="min-h-screen">
+      <div className = "min-h-screen">
         <Navbar />
         <div className="min-h-80 flex justify-center text-center items-center p-6">
           <section className="tracking-tight">
@@ -16,7 +16,7 @@ function Home() {
               >
                 100xDevs,
               </h1>
-              <h1 className="text-7xl font-bold">beacause</h1>
+              <h1 className="text-7xl font-bold">because</h1>
             </div>
 
             <h1 className="text-7xl font-bold">10x ain't enough!</h1>

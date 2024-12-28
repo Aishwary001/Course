@@ -26,25 +26,25 @@ function SignIn() {
     setError('');
 
     // Login API Call
-    // try {
-    //   const response = await axiosInstance.post('/login', {
-    //     email: email,
-    //     password: password,
-    //   });
+    try {
+      const response = await axiosInstance.post('/login', {
+        email: email,
+        password: password,
+      });
 
-    //   if (response.data && response.data.accessToken) {
-    //     localStorage.setItem('token', response.data.accessToken);
-    //     navigate('/');
-    //   } else {
-    //     setError('Login failed. Please try again.');
-    //   }
-    // } catch (error) {
-    //   if (error.response && error.response.data && error.response.data.message) {
-    //     setError(error.response.data.message);
-    //   } else {
-    //     setError('An unexpected error occurred. Please try again.');
-    //   }
-    // }
+      if (response.data && response.data.accessToken) {
+        localStorage.setItem('token', response.data.accessToken);
+        navigate('/');
+      } else {
+        setError('Login failed. Please try again.');
+      }
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        setError(error.response.data.message);
+      } else {
+        setError('An unexpected error occurred. Please try again.');
+      }
+    }
   };
   
     return (

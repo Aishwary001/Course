@@ -32,30 +32,30 @@ function SignUp() {
 
     setError('');
 
-    // // Login Api Integration
-    // try {
-    //   const response = await axiosInstance.post('/create-account', {
-    //     fullName : name,
-    //     email: email,
-    //     password: password,
-    //   });
+    // Login Api Integration
+    try {
+      const response = await axiosInstance.post('/create-account', {
+        fullName : name,
+        email: email,
+        password: password,
+      });
 
-    //   if (response.data && response.data.error) {
-    //     setError(response.data.message);
-    //     return;
-    //   }
+      if (response.data && response.data.error) {
+        setError(response.data.message);
+        return;
+      }
       
-    //   if(response.data && response.data.accessToken){
-    //     localStorage.setItem("token",response.data.accessToken)
-    //     navigate('/')
-    //   }
-    // } catch (error) {
-    //   if (error.response && error.response.data && error.response.data.message) {
-    //     setError(error.response.data.message);
-    //   } else {
-    //     setError('An unexpected error occurred. Please try again.');
-    //   }
-    // }
+      if(response.data && response.data.accessToken){
+        localStorage.setItem("token",response.data.accessToken)
+        navigate('/')
+      }
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        setError(error.response.data.message);
+      } else {
+        setError('An unexpected error occurred. Please try again.');
+      }
+    }
     };
    return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
